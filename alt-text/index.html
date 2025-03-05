@@ -1,0 +1,70 @@
+<!--
+
+Welcome to the alt-text exercise of the Reactor Way of Accessibility Course.
+
+The purpose of this exercise is to illustrate the different needs for an alt-text in images.
+
+This site has some <img> tags that are missing their alt properties. Fill them in, and keep in mind
+that different types of images (decorative, functional, descriptive) need different types of alt texts.
+
+The alt text property goes inside the image tag, before the ending /> tag. 
+Here is an example of a image tag with alt text added:
+
+<img src="jokukuva.png" alt="My descriptive alt text" />
+
+If you are feeling completely lost, here are some resources to help you get started:
+
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt
+https://media.nngroup.com/media/editor/2024/11/19/alt-text-link-tree-1-1.png
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Alt-text Exercise</title>
+</head>
+<body>
+  <header>
+    <img src="static/hero.jpg"/>
+    <h1>Brand Imagery</h1>
+  </header>
+  <main>
+    <section>
+      <h2>
+        Offices
+      </h2>
+      <ul>
+        <li>
+          <img src="static/helsinki1.jpg" />
+          <a href="static/helsinki1.jpg" target="_blank" download="helsinki1.jpg">
+            <img src="static/download.svg" />
+          </a>
+        </li>
+        <li>
+          <img src="static/helsinki2.jpg" />
+          <a href="static/helsinki2.jpg" target="_blank" download="helsinki2.jpg">
+            <img src="static/download.svg" />
+          </a>
+        </li>
+      </ul>
+    </section> 
+    <section>
+      <h2>
+        Expertise
+      </h2>
+      <ul>
+        <li>
+          <img src="static/laptop.jpg" />
+          <a href="static/laptop.jpg" target="_blank" download="laptop.jpg">
+            <img src="static/download.svg" />
+          </a>
+        </li>
+      </ul>
+    </section> 
+  </main>
+</body>
+</html>
