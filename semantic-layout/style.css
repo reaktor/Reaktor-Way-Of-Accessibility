@@ -1,0 +1,132 @@
+
+@font-face {
+  font-family: Larken;
+  font-style: normal;
+  font-weight: 100;
+  src: url("./fonts/LarkenW05-Thin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Scto;
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/Scto-Grotesk-A-Light.woff") format("woff");
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+}
+
+h1 {
+  color: black;
+  font-family: "Larken", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 32px;
+  font-weight: 100;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+
+h2 {
+  color: black;
+  font-family: "Larken", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 48px;
+  font-weight: 100;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+
+p {
+  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 20px;
+  letter-spacing: -3%;
+  font-weight: 300;
+}
+
+a {
+  color: black;
+}
+
+/* Layout/container flow styles */
+
+header, .header {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 128px;
+}
+
+nav, .nav {
+  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 20px;
+  letter-spacing: -3%;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+main, .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 64px;
+  flex: 1;
+}
+
+main img, .container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
+  align-self: flex-start;
+}
+
+.about {
+  max-width: 30%;
+}
+
+button, .button {
+  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 20px;
+  letter-spacing: -3%;
+  font-weight: 300;
+  color: white;
+  background: black;
+  border: 1px solid black;
+  border-radius: 32px;
+  width: fit-content;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover, .button:hover {
+  color: black;
+  background: white;
+}
+
+footer, .footer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 16px;
+  letter-spacing: -3%;
+  font-weight: 300;
+}
+
