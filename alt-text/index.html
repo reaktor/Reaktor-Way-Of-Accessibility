@@ -1,78 +1,237 @@
-<!--
-
-Welcome to the alt-text exercise in the Reaktor Way of Accessibility Course!
-
-Assignment:
-1. Add missing alt-attributes.
-2. Right-click anywhere on the web page and select Inspect. Click the Inspect icon in the top-left corner of DevTools (Chrome) and hover over the images you fixed. How did your changes improve the accessibility of this site?
-
-Instructions:
-The purpose of this exercise is to illustrate the different needs for alt-texts in images.
-
-This site has some <img> tags that are missing their alt properties. Fill them in, and keep in mind
-that different types of images (decorative, functional, descriptive) need different types of alt texts.
-
-The alt-text property goes inside the image tag, before the ending /> tag. 
-Here is an example of a image tag with an alt-text added:
-
-<img src="somephoto.png" alt="My descriptive alt text" />
-
-If need more help, here are some resources to help you get started:
-
-https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt
-
-https://web.dev/learn/accessibility/images
-
-https://media.nngroup.com/media/editor/2024/11/19/alt-text-link-tree-1-1.png
-
--->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <title>Alt-text Exercise</title>
+  <title>Semantic Layout Exercise</title>
 </head>
+
 <body>
-  <header>
-    <img src="static/hero.jpg"/>
-    <h1>Brand Imagery</h1>
-  </header>
-  <main>
-    <section>
-      <h2>
-        Offices
-      </h2>
-      <ul>
-        <li>
-          <img src="static/helsinki1.jpg" />
-          <a href="static/helsinki1.jpg" target="_blank" download="helsinki1.jpg">
-            <img src="static/download.svg" />
-          </a>
-        </li>
-        <li>
-          <img src="static/helsinki2.jpg" />
-          <a href="static/helsinki2.jpg" target="_blank" download="helsinki2.jpg">
-            <img src="static/download.svg" />
-          </a>
-        </li>
-      </ul>
-    </section> 
-    <section>
-      <h2>
-        Expertise
-      </h2>
-      <ul>
-        <li>
-          <img src="static/laptop.jpg" />
-          <a href="static/laptop.jpg" target="_blank" download="laptop.jpg">
-            <img src="static/download.svg" />
-          </a>
-        </li>
-      </ul>
-    </section> 
-  </main>
+  <h1>Alt-text</h1>
+  <section class="exercise-section">
+    <section class="exercise-section-title">
+      <button class="exercise-section-toggle">+</button>
+      <h2>Instructions</h2>
+    </section>
+    <section id="instruction-text">
+      <p>
+        Below is sample website content. Some &lt;img&gt; tags on this site are missing alt attributes. Your task is to add them. Consider what visual elements need to be conveyed programmatically, such as for screen readers. Think about the purpose of the alt text – is it informative or functional? If an image is purely decorative, should it be left out?<br><br>
+        Tip: The alt attribute is placed inside the &lt;img&gt; tag, before the closing /&gt;.
+      </p>
+      <h3>Assignment</h3>
+      <ol>
+        <li>Find the row where the content of the exercise starts on Codepen HTML.</li>
+        <li>Add missing alt attributes to images to the HTML section.</li>
+        <li>Right-click anywhere on the web page and select Inspect. Click the Inspect icon in the top-left corner of DevTools (Chrome) and hover over the images you fixed.</li>
+      </ol>
+      <p>How did your changes improve the accessibility of this site?</p>
+      <h3>Example</h3>
+      <pre>&lt;img src="somephoto.png" alt="A sunset over the mountains" /&gt;</pre>
+      <h3>Testing for feedback</h3>
+      <p>
+        Informative images convey a concept, idea, or emotion. These include photos of real-world objects, simple drawings, and images containing text. If an image is informative, its alt text should clearly describe its purpose and meaning.
+      </p>
+   </section>
+  </section>
+  <section class="exercise-section">
+    <section class="exercise-section-title">
+      <button class="exercise-section-toggle">+</button>
+      <h2>Study Material</h2>
+    </section>
+    <section id="study-material-text">
+      <p>
+        <b>Alt text</b> describes visual content for people using assistive technologies like screen readers. While it's often read aloud, how it's presented depends on the technology and user settings.
+      </p>
+      <p>
+        When writing alt text, consider whether the image is <b>decorative</b>, <b>informative</b>, or <b>functional</b>.
+      </p>
+      <h3>Decorative images</h3>
+      <p>Decorative images do not add essential context or meaning. They are primarily for aesthetics rather than conveying information. However, interpretations of “decorative” can vary—some users prefer descriptions for all images, while others may choose to skip them. Since users cannot infer details that aren’t provided, it’s generally best to include an alt text when uncertain.</p>
+      <h3>Informative images</h3>
+      <p>
+        Informative images convey a concept, idea, or emotion. These include photos of real-world objects, simple drawings, and images containing text. If an image is informative, its alt text should clearly describe its purpose and meaning.
+      </p>
+      <h3>Functional images</h3>
+      <p>
+        Functional images serve an interactive role, such as linking to another page or triggering an action. Examples include logos that navigate to the homepage, a magnifying glass icon for search, or social media icons directing users to external platforms. Unlike informative images, the alt text for functional images should describe the action they perform rather than their appearance.
+      </p>
+      <figure class="alt-text-figure">
+        <img src="static/alt-text.png" alt="" >
+        <figcaption>An infographic that might prove helpful when choosing what kind of alt text, if any, to include in the image (Courtesy of nngroup.com).</figcaption>
+      </figure>
+   </section>
+  </section>
+  <section class="exercise-section">
+    <section class="exercise-section-title">
+      <button class="exercise-section-toggle">+</button>
+      <h2>Exercise</h2>
+    </section>
+    <section id="exercise-introduction-text">
+      <p>Below is the mockup website you'll be working on.</p>
+    </section>
+  </section>
+  <section id="exercise-webpage">
+    <!--
+    
+   ####### #     # ####### ######   #####  ###  #####  #######    
+   #        #   #  #       #     # #     #  #  #     # #          
+   #         # #   #       #     # #        #  #       #          
+   #####      #    #####   ######  #        #   #####  #####      
+   #         # #   #       #   #   #        #        # #          
+   #        #   #  #       #    #  #     #  #  #     # #          
+   ####### #     # ####### #     #  #####  ###  #####  #######    
+                                                                
+    #####  #######    #    ######  #######  #####                 
+   #     #    #      # #   #     #    #    #     #                
+   #          #     #   #  #     #    #    #                      
+    #####     #    #     # ######     #     #####                 
+         #    #    ####### #   #      #          #      
+   #     #    #    #     # #    #     #    #     #               
+    #####     #    #     # #     #    #     #####                 
+                                                                
+   #     # ####### ######  #######                                
+   #     # #       #     # #                                      
+   #     # #       #     # #                                      
+   ####### #####   ######  #####                                  
+   #     # #       #   #   #                                      
+   #     # #       #    #  #                                      
+   #     # ####### #     # #######          
+    
+    -->
+    <header>
+      <nav>
+        <h1>Rent a Space</h1>
+        <ul>
+          <li class="spaces-dropdown">
+            <a href="#" class="dropdown-button">Spaces<img class="chevron-icon" src="static/chevron.svg" /></a>
+            <div class="dropdown">
+              <a href="#">Helsinki</a>
+              <a href="#">Turku</a>
+              <a href="#">Tampere</a>
+            </div>
+          </li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+      </nav>
+      <div class="hero-image">
+        <img src="static/hero.jpg" alt="" />
+        <h2>Helsinki</h2>
+      </div>
+    </header>
+
+    <main>
+      <section class="spaces-description">
+        <h3>Shared spaces</h3>
+        <p>Love working around others and enjoying casual office chats? Our shared spaces are perfect for those who thrive
+          in a social environment. We're known for our vibrant community, so if you’re looking to meet new people, this
+          could be the perfect fit for you!</p>
+        <section class="spaces">
+
+        <ul>
+          <li>
+            <figure>
+              <img src="static/turku1.jpg" />
+              <button>
+                <img src="static/heart.svg" />
+              </button>
+              <figcaption>Katajanokankatu 1</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+            <img src="static/turku2.jpg" />
+            <button>
+              <img src="static/heart.svg" />
+            </button>
+            <figcaption>Uudenmaankatu 3</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+            <img src="static/helsinki1.jpg" />
+            <button>
+              <img src="static/heart.svg" />
+            </button>
+            <figcaption>Urho Kekkosen katu 3</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+            <img src="static/turku3.jpg" />
+            <button>
+              <img src="static/heart.svg" />
+            </button>
+            <figcaption>Vilhovuorenkatu 13</figcaption>
+            </figure>
+          </li>
+        </ul>
+        </section>
+      </section>
+      <section class="spaces-description">
+        <h3>Individual spaces</h3>
+        <p>If you need a quiet, focused space away from home, our private rooms offer just that: your own dedicated
+          workspace with access to community kitchens and shared areas. Enjoy the best of both worlds: privacy when you
+          need it and community when you want it.</p>
+        <section class="spaces">
+        <ul>
+          <li>
+            <figure>
+            <img src="static/space1.jpg" />
+            <button>
+              <img src="static/heart.svg" />
+            </button>
+            <figcaption>Annankatu 14</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+            <img src="static/space2.jpg" />
+            <button>
+              <img src="static/heart.svg" />
+            </button>
+            <figcaption>Lapinlahdentie 9</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+            <img src="static/space3.jpg" />
+            <button>
+              <img src="static/heart.svg" />
+            </button>
+            <figcaption>Rikhardinkatu 3</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+            <img src="static/space4.jpg" />
+            <button>
+              <img src="static/heart.svg" />
+            </button>
+            <figcaption>Sofiankatu 8</figcaption>
+            </figure>
+          </li>
+        </ul>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-nav">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy</a>
+        <a href="#">Cookies</a>
+      </div>
+      <div class="footer-socials">
+        <span>Facebook</span>
+        <span>Instagram</span>
+        <span>LinkedIn</span>
+      </div>
+    </footer>
+  </section>
+  <script src="script.js"></script>
 </body>
+
 </html>
