@@ -183,7 +183,7 @@ a {
   flex-direction: column;
 }
 
-#exercise-webpage nav {
+#exercise-webpage header nav {
   font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 20px;
   letter-spacing: -3%;
@@ -197,7 +197,7 @@ a {
   box-sizing: border-box;
 }
 
-#exercise-webpage nav ul {
+#exercise-webpage header nav ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -212,8 +212,8 @@ a {
 }
 
 #exercise-webpage .dropdown-button {
-  padding-bottom: 8px;
-  border-bottom: 1px solid black;
+  padding-bottom: 32px; /* Load bearing padding required for menu not disappearing when hovering between the nav link and menu element*/
+  text-decoration: underline;
 }
 
 #exercise-webpage .chevron-icon {
@@ -362,14 +362,14 @@ a {
   box-sizing: border-box;
 }
 
-#exercise-webpage .footer-nav,
+#exercise-webpage footer nav,
 #exercise-webpage .footer-socials {
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
 
-#exercise-webpage footer a{
+#exercise-webpage footer a {
   color: white;
   text-decoration: none;
 }

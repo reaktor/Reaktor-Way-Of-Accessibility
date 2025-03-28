@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <title>Semantic Layout Exercise</title>
+  <title>Alt-text Exercise</title>
 </head>
 
 <body>
@@ -107,10 +107,10 @@
         <ul>
           <li class="spaces-dropdown">
             <a href="#" class="dropdown-button">Spaces<img class="chevron-icon" src="static/chevron.svg" /></a>
-            <div class="dropdown">
-              <a href="#">Helsinki</a>
-              <a href="#">Turku</a>
-              <a href="#">Tampere</a>
+            <menu class="dropdown" role="menu">
+              <li><a role="menuitem" href="#">Helsinki</a></li>
+              <li><a role="menuitem" href="#">Turku</a></li>
+              <li><a role="menuitem" href="#">Tampere</a></li>
             </div>
           </li>
           <li><a href="#">Pricing</a></li>
@@ -118,7 +118,7 @@
         </ul>
       </nav>
       <div class="hero-image">
-        <img src="static/hero.jpg" alt="" />
+        <img src="static/hero.jpg" />
         <h2>Helsinki</h2>
       </div>
     </header>
@@ -219,16 +219,16 @@
       </section>
     </main>
     <footer>
-      <div class="footer-nav">
+      <nav>
         <a href="#">Terms and Conditions</a>
         <a href="#">Privacy</a>
         <a href="#">Cookies</a>
-      </div>
-      <div class="footer-socials">
-        <span>Facebook</span>
-        <span>Instagram</span>
-        <span>LinkedIn</span>
-      </div>
+      </nav>
+      <nav class="footer-socials">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </nav>
     </footer>
   </section>
   <script src="script.js"></script>
