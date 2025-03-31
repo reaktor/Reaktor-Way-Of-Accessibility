@@ -212,7 +212,12 @@ a {
 }
 
 #exercise-webpage .dropdown-button {
-  padding-bottom: 32px; /* Load bearing padding required for menu not disappearing when hovering between the nav link and menu element*/
+  /* The padding below is load bearing.
+  Required for menu not disappearing when hovering between the nav link and menu element.
+  The better way to do this would be to wrap the menu itself in a invisible wrapper element
+  with a padding.
+  */
+  padding-bottom: 32px; 
   text-decoration: underline;
 }
 
