@@ -23,6 +23,7 @@ body {
   flex-direction: column;
   height: 100%;
   min-height: 100%;
+  background-color: #F1EFED;
 }
 
 .title {
@@ -43,15 +44,13 @@ body {
   margin: 0;
 }
 
-p {
-  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
-  font-size: 20px;
-  letter-spacing: -3%;
-  font-weight: 300;
-}
-
-a {
+p, a {
   color: black;
+  font-family: Scto Grotesk A Light, "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  text-decoration: none;
 }
 
 /* Layout/container flow styles */
@@ -63,16 +62,16 @@ header, .header {
   align-items: center;
   padding: 40px 40px 32px 40px;
 }
-
-nav, .nav {
-  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
-  font-size: 20px;
-  letter-spacing: -3%;
-  font-weight: 300;
+nav, .nav, nav p, nav a { 
+  font-family: Scto Grotesk A Light, "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   display: flex;
   flex-direction: row;
   gap: 40px;
+  align-items: center;
 }
+
 
 .spaces-dropdown {
   position: relative;
@@ -83,6 +82,16 @@ nav, .nav {
   margin-left: 10px;
   transform-origin: center;
   transition: transform 0.2s linear;
+}
+
+.chevron-icon svg {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.dropdown-button {
+  cursor: pointer;
+
 }
 
 .dropdown {
@@ -111,7 +120,7 @@ main, .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 24px;
+  gap: 40px;
   flex: 1;
   align-items: center;
   padding-bottom: 232px;
@@ -119,10 +128,12 @@ main, .container {
 
 main img, .container img {
   width: 100%;
-  max-width: 500px;
   height: auto;
-  border-radius: 16px;
   align-self: flex-start;
+}
+
+.container p {
+  max-width: 800px;
 }
 
 button, .button {
@@ -210,10 +221,6 @@ footer a, .footer a {
   padding-right: 50px;
 }
 
-.shared-spaces .description-container p {
-  max-width: 50%;
-}
-
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -235,6 +242,10 @@ footer a, .footer a {
 .card figure {
   position: relative;
   margin: 0;
+  height: 330px;
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .card figure img {
@@ -243,6 +254,12 @@ footer a, .footer a {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
+
+.card figure > img {
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .card figure button {
   position: absolute;
@@ -282,11 +299,6 @@ strong {
   font-weight: 500;
 }
 
-.individual-spaces, .contact-us {
-  text-align: center;
-  padding: 80px 40px;
-  background-color: #f5f2ef;
-}
 
 .space-cards {
   display: flex;
@@ -332,8 +344,6 @@ strong {
   gap: 16px;
   margin-top: 32px;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .contact-form input,
@@ -350,7 +360,6 @@ strong {
 }
 
 .contact-form button {
-  background-color: #7a5c3d;
   border: none;
   border-radius: 32px;
   color: white;
@@ -365,3 +374,81 @@ strong {
   background-color: #5c422e;
 }
 
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.pricing-header, .pricing-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 24px 40px;
+  align-items: center;
+}
+
+.pricing-header {
+  border-bottom: 1px solid #ddd;
+  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #999;
+}
+
+.pricing-row {
+  border-bottom: 1px solid #eee;
+}
+
+.feature-title {
+  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #aaa;
+}
+
+.feature {
+  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.feature ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature ul li {
+  margin-bottom: 8px;
+}
+
+.contact-us {
+  position: relative;
+}
+.contact-us p, .contact-us a {
+  color: white;;
+}
+
+.contact-us-content {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.individual-spaces {
+  padding-left: 40px;
+}

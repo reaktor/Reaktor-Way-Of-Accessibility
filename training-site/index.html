@@ -14,7 +14,11 @@
       <div class="spaces-dropdown">
         <div class="dropdown-button">
           Spaces
-          <span class="chevron-icon">⌄</span>
+          <span class="chevron-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
         </div>
         <div class="dropdown">
           <a href="#">Shared Spaces</a>
@@ -36,6 +40,8 @@
         <p>Discover your ideal workspace in vibrant Helsinki. Whether you need a cozy nook for focused work or a collaborative environment to spark creativity, find flexible and inspiring spaces that adapt to your needs. Explore our diverse range of locations across Helsinki and unlock a workspace that empowers your productivity.</p>
         <br/>
         <p>Rent today and redefine how you work in the heart of Finland's dynamic capital.</p>
+        <button type="submit">Proceed</button>
+
       </div>
     </section>
 
@@ -113,9 +119,67 @@
       </div>
     </section>
 
+    <section class="pricing">
+      <h2 class="sub-header">Pick your plan</h2>
+      <div class="pricing-table">
+        <div class="pricing-header">
+          <div class="plan"></div>
+          <div class="plan">Basic</div>
+          <div class="plan">Pro</div>
+          <div class="plan">All in</div>
+        </div>
+        <div class="pricing-row">
+          <div class="feature-title">Price</div>
+          <div class="feature">64€ /month</div>
+          <div class="feature">99€ /month</div>
+          <div class="feature">129€ /month</div>
+        </div>
+        <div class="pricing-row">
+          <div class="feature-title">Perks</div>
+          <div class="feature">
+            <ul>
+              <li>Unlimited hours</li>
+              <li>1 coffee per day</li>
+              <li>Free wifi (100 Mbps)</li>
+            </ul>
+          </div>
+          <div class="feature">
+            <ul>
+              <li>Unlimited hours</li>
+              <li>Unlimited coffee</li>
+              <li>Speed wifi (500 Mbps)</li>
+            </ul>
+          </div>
+          <div class="feature">
+            <ul>
+              <li>Unlimited hours</li>
+              <li>Unlimited coffee</li>
+              <li>Speed wifi (500 Mbps)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-us">
+      <img src="static/contact-us.png" />
+      <div class="contact-us-content">
+        <p class="sub-header">Contact us</p>
+        <p>Need to get in touch? Send us a message or find someone to connect with directly <a href="#"><b>here</b></a>.</p>
+     
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone">
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit">Proceed</button>
+      </form>
+    </div>
+
+    </section>
 
     <section class="individual-spaces">
-      <div>
+      <div class="description-container">
         <p class="sub-header">Individual spaces</p>
         <p>If you need a quiet, focused space away from home, our private rooms offer just that: your own dedicated workspace with access to community kitchens and shared areas. Enjoy the best of both worlds: privacy when you need it and community when you want it.</p>
         
@@ -187,21 +251,9 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section>    
     
-    
-    <section class="contact-us">
-      <p class="sub-header">Contact us</p>
-      <p>Need to get in touch? Send us a message or find someone to connect with directly <a href="#">here</a>.</p>
-      
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="phone" placeholder="Phone">
-        <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit">Proceed</button>
-      </form>
-    </section>
+   
   </main>
     <footer class="footer">
       <div class="footer-nav">
