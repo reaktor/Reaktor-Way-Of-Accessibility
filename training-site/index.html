@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <header class="header">
+  <div class="header">
     <div class="logo title">Rent a Space</div>
     <nav class="navbar">
       <div class="spaces-dropdown">
@@ -25,31 +25,43 @@
           <a href="#">Individual Spaces</a>
         </div>
       </div>
-      <a href="#">Pricing</a>
-      <a href="#">About us</a>
+      <a href="#pricing">Pricing</a>
+      <a href="https://www.reaktor.com/about-us">About us</a>
     </nav>
-  </header>
+  </div>
 
   <main class="container">
-    <section class="hero">
-      <video autoplay muted playsinline>
-        <source src="static/helsinki-gif.mp4" type="video/mp4">
-      </video>
-      <div class="hero-content">
-        <p class="title">Helsinki</p>
-        <p>Discover your ideal workspace in vibrant Helsinki. Whether you need a cozy nook for focused work or a collaborative environment to spark creativity, find flexible and inspiring spaces that adapt to your needs. Explore our diverse range of locations across Helsinki and unlock a workspace that empowers your productivity.</p>
-        <br/>
-        <p>Rent today and redefine how you work in the heart of Finland's dynamic capital.</p>
-        <button type="submit">Proceed</button>
-
+    
+    <div class="floating-chat">
+      <div class="chat-icon">
+        <img src="static/chat-bubble.svg"/>
+        <span class="chat-badge">1</span>
       </div>
-    </section>
+    </div>
+    <div>
+      <section class="announcement-bar">
+        <p>SIGN UP TO OUR APP AND GET -25% OFF</p>
+      </section>
+      <section class="hero">
+        <video autoplay muted playsinline loop>
+          <source src="static/helsinki-gif.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+          <p class="title">Welcome to Helsinki!</p>
+          <p>Discover your ideal workspace in vibrant Helsinki. Whether you need a cozy nook for focused work or a collaborative environment to spark creativity, find flexible and inspiring spaces that adapt to your needs. Explore our diverse range of locations across Helsinki and unlock a workspace that empowers your productivity.</p>
+          <br/>
+          <p>Rent today and redefine how you work in the heart of Finland's dynamic capital.</p>
+          <a class="button" href="#shared-spaces">Start browsing</a>
+
+        </div>
+      </section>
+    </div>
 
 
-    <section class="shared-spaces">
+    <section id="shared-spaces" class="shared-spaces">
       <div class="description-container">
         <p class="title">Shared spaces</p>
-        <p>Love working around others and enjoying casual office chats? Our shared spaces are perfect for those who thrive in a social environment. We're known for our vibrant community, so if you’re looking to meet new people, this could be the perfect fit for you!</p>
+        <p>Love working around others and enjoying casual office chats? Our shared spaces are perfect for those who thrive in a social environment. We're known for <a href="https://rex.reaktor.com/people"><b>our vibrant community</b></a>, so if you’re looking to meet new people, this could be the perfect fit for you!</p>
       </div>
       <div class="space-cards">
         <div class="card">
@@ -119,7 +131,7 @@
       </div>
     </section>
 
-    <section class="pricing">
+    <section id="pricing" class="pricing">
       <h2 class="sub-header">Pick your plan</h2>
       <div class="pricing-table">
         <div class="pricing-header">
@@ -130,31 +142,121 @@
         </div>
         <div class="pricing-row">
           <div class="feature-title">Price</div>
-          <div class="feature">64€ /month</div>
-          <div class="feature">99€ /month</div>
-          <div class="feature">129€ /month</div>
+          <div class="feature">64€ <span class="secondary-text">/month</span></div>
+          <div class="feature">99€ <span class="secondary-text">/month</span></div>
+          <div class="feature">129€ <span class="secondary-text">/month</span></div>
         </div>
         <div class="pricing-row">
           <div class="feature-title">Perks</div>
           <div class="feature">
             <ul>
-              <li>Unlimited hours</li>
-              <li>1 coffee per day</li>
-              <li>Free wifi (100 Mbps)</li>
+              <li>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <img src="static/clock-fast-forward.svg" alt="Clock Icon">
+                  </div>
+                  <div class="feature-content">
+                    <h3>Unlimited hours</h3>
+                    <p>Spend as many hours as you wish in the space you rent.</p>
+                  </div>
+              </div>
+            </li>
+              <li>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <img src="static/face-content.svg" alt="Content face icon">
+                  </div>
+                  <div class="feature-content">
+                    <h3>1 coffee per day</h3>
+                    <p>Get free coffee from the shared kitchen once a day.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <img src="static/wifi.svg" alt="Wifi icon">
+                  </div>
+                  <div class="feature-content">
+                    <h3>Free wifi</h3>
+                    <p>Our 100 Mbps covers multiple users and devices.</p>
+                  </div>
+                </div>
+                </li>
             </ul>
           </div>
           <div class="feature">
             <ul>
-              <li>Unlimited hours</li>
-              <li>Unlimited coffee</li>
-              <li>Speed wifi (500 Mbps)</li>
+              <li>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <img src="static/clock-fast-forward.svg" alt="Clock Icon">
+                  </div>
+                  <div class="feature-content">
+                    <h3>Unlimited hours</h3>
+                    <p>Spend as many hours as you wish in the space you rent.</p>
+                  </div>
+              </div>
+            </li>
+              <li>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <img src="static/face-content.svg" alt="Content face icon">
+                  </div>
+                  <div class="feature-content">
+                    <h3>Unlimited coffee</h3>
+                    <p>Get free coffee as much as you want.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <img src="static/wifi.svg" alt="Clock Icon">
+                  </div>
+                  <div class="feature-content">
+                    <h3>Speed wifi</h3>
+                    <p>Our 500 Mbps covers multiple users and devices.</p>
+                  </div>
+                </div>
+                </li>
             </ul>
           </div>
           <div class="feature">
             <ul>
-              <li>Unlimited hours</li>
-              <li>Unlimited coffee</li>
-              <li>Speed wifi (500 Mbps)</li>
+              <li>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <img src="static/clock-fast-forward.svg" alt="Clock Icon">
+                  </div>
+                  <div class="feature-content">
+                    <h3>Unlimited hours</h3>
+                    <p>Spend as many hours as you wish in the space you rent.</p>
+                  </div>
+              </div>
+            </li>
+              <li>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <img src="static/face-content.svg" alt="Content face icon">
+                  </div>
+                  <div class="feature-content">
+                    <h3>Unlimited coffee</h3>
+                    <p>Get free coffee as much as you want.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <img src="static/wifi.svg" alt="Wifi icon">
+                  </div>
+                  <div class="feature-content">
+                    <h3>Speed wifi</h3>
+                    <p>Our 500 Mbps covers multiple users and devices.</p>
+                  </div>
+                </div>
+                </li>
             </ul>
           </div>
         </div>
@@ -165,13 +267,13 @@
       <img src="static/contact-us.png" />
       <div class="contact-us-content">
         <p class="sub-header">Contact us</p>
-        <p>Need to get in touch? Send us a message or find someone to connect with directly <a href="#"><b>here</b></a>.</p>
+        <p>Need to get in touch? Send us a message or find someone to connect with directly <a href="https://rex.reaktor.com/people"><b>here</b></a>.</p>
      
       <form class="contact-form">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="phone" placeholder="Phone">
-        <textarea name="message" placeholder="Message" required></textarea>
+        <input type="text" name="name" placeholder="Name *" required>
+        <input type="email" name="email" placeholder="Email *" required>
+        <input type="tel" name="phone" placeholder="Phone *" required>
+        <textarea name="message" placeholder="Message"></textarea>
         <button type="submit">Proceed</button>
       </form>
     </div>
@@ -262,9 +364,9 @@
         <a href="#">Cookies</a>
       </div>
       <div class="footer-socials">
-        <a href="#"><img src="your-icon-path/facebook-icon.svg" alt="Facebook" /></a>
-        <a href="#"><img src="your-icon-path/instagram-icon.svg" alt="Instagram" /></a>
-        <a href="#"><img src="your-icon-path/linkedin-icon.svg" alt="LinkedIn" /></a>
+        <a href="#"><img src="static/icons8-facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="static/icons8-instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="static/icons8-linkedin.png" alt="LinkedIn" /></a>
       </div>
     </footer>
     

@@ -14,6 +14,7 @@
 }
 
 html, body {
+  scroll-behavior: smooth;
   margin: 0;
   height: 100%;
 }
@@ -49,7 +50,6 @@ p, a {
   font-family: Scto Grotesk A Light, "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 100%;
   text-decoration: none;
 }
 
@@ -62,6 +62,7 @@ header, .header {
   align-items: center;
   padding: 40px 40px 32px 40px;
 }
+
 nav, .nav, nav p, nav a { 
   font-family: Scto Grotesk A Light, "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 14px;
@@ -122,7 +123,6 @@ main, .container {
   justify-content: center;
   gap: 40px;
   flex: 1;
-  align-items: center;
   padding-bottom: 232px;
 }
 
@@ -132,14 +132,10 @@ main img, .container img {
   align-self: flex-start;
 }
 
-.container p {
-  max-width: 800px;
-}
-
 button, .button {
+  display: block;
   font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 18px;
-  letter-spacing: -3%;
   font-weight: 300;
   color: white;
   background: black;
@@ -149,7 +145,6 @@ button, .button {
   padding: 8px 16px;
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 16px;
 }
 
 button:hover, .button:hover {
@@ -166,7 +161,7 @@ footer, .footer {
   font-size: 20px;
   letter-spacing: -3%;
   font-weight: 300;
-  background: black;
+  background: #DEDAD5;
   color: white;
   padding: 24px 40px;
   box-sizing: border-box;
@@ -178,9 +173,7 @@ footer, .footer {
   gap: 40px;
 }
 
-footer a, .footer a {
-  color: white;
-}
+
 
 /* Hero Section */
 .hero {
@@ -221,6 +214,10 @@ footer a, .footer a {
   padding-right: 50px;
 }
 
+.description-container p {
+  max-width: 50%;
+}
+
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -232,7 +229,7 @@ footer a, .footer a {
   background: white;
   border-radius: 16px;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
-  max-width: 300px;
+  max-width: 500px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -344,6 +341,7 @@ strong {
   gap: 16px;
   margin-top: 32px;
   max-width: 500px;
+  width: 100%;
 }
 
 .contact-form input,
@@ -353,6 +351,10 @@ strong {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #00000059
 }
 
 .contact-form textarea {
@@ -385,7 +387,7 @@ strong {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1000px;
+  max-width: 85%;
   background: white;
   border-radius: 16px;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
@@ -423,6 +425,14 @@ strong {
   font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 18px;
   font-weight: 300;
+  height: 100%;
+  padding: 16px;
+  padding-left: 0;
+}
+
+.feature .secondary-text {
+  color: #aaa;
+  font-size: 12px;
 }
 
 .feature ul {
@@ -434,6 +444,48 @@ strong {
 .feature ul li {
   margin-bottom: 8px;
 }
+
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.feature-icon img {
+  width: 24px;
+  height: 24px;
+  align-self: center;
+}
+
+.feature-content h3 {
+  margin: 0;
+  font-family: "Larken", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  color: black;
+}
+
+.feature-content p {
+  margin: 4px 0 0 0;
+  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #999999;
+}
+
 
 .contact-us {
   position: relative;
@@ -447,8 +499,78 @@ strong {
   top: 50%;
   left:50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .individual-spaces {
   padding-left: 40px;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+  background-color: #F4A73C; /* Oranssi sävy */
+  text-align: center;
+  padding: 10px 0;
+}
+
+.announcement-bar p {
+  margin: 0;
+  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Floating Chat Icon */
+.floating-chat {
+  position: fixed;
+  top: 64px;
+  right: 64px;
+  background: white;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  cursor: pointer;
+}
+.chat-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.chat-icon img {
+  width: 60%;
+}
+
+.chat-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Header Adjustments */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 40px;
+  background: #F1EFED; /* Sama kuin body tausta */
+  position: relative;
+  z-index: 10;
 }
