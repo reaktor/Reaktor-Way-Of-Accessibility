@@ -9,7 +9,7 @@
 <body>
 
   <header class="header">
-    <div class="logo">Rent a Space</div>
+    <div class="logo title">Rent a Space</div>
     <nav class="navbar">
       <div class="spaces-dropdown">
         <div class="dropdown-button">
@@ -28,18 +28,23 @@
 
   <main class="container">
     <section class="hero">
-      <img src="static/hero.jpg" alt="Helsinki View">
+      <video autoplay muted playsinline>
+        <source src="static/helsinki-gif.mp4" type="video/mp4">
+      </video>
       <div class="hero-content">
-        <h1>Helsinki</h1>
-        <p>Discover your ideal workspace in vibrant Helsinki. Whether you need a cozy nook or a collaborative environment, explore diverse options to suit your style.</p>
+        <p class="title">Helsinki</p>
+        <p>Discover your ideal workspace in vibrant Helsinki. Whether you need a cozy nook for focused work or a collaborative environment to spark creativity, find flexible and inspiring spaces that adapt to your needs. Explore our diverse range of locations across Helsinki and unlock a workspace that empowers your productivity.</p>
+        <br/>
+        <p>Rent today and redefine how you work in the heart of Finland's dynamic capital.</p>
       </div>
     </section>
 
 
     <section class="shared-spaces">
-      <h2>Shared spaces</h2>
-      <p>We're known for <strong>our vibrant community</strong>. If you're looking to meet new people, this could be the perfect environment for you!</p>
-
+      <div class="description-container">
+        <p class="title">Shared spaces</p>
+        <p>Love working around others and enjoying casual office chats? Our shared spaces are perfect for those who thrive in a social environment. We're known for our vibrant community, so if you’re looking to meet new people, this could be the perfect fit for you!</p>
+      </div>
       <div class="space-cards">
         <div class="card">
           <figure>
@@ -110,8 +115,11 @@
 
 
     <section class="individual-spaces">
-      <h2>Individual spaces</h2>
-      <p>If you need a quiet, focused space away from home, our private rooms offer just that: your own dedicated workspace with access to community kitchens and shared areas. Enjoy the best of both worlds: privacy when you need it and community when you want it.</p>
+      <div>
+        <p class="sub-header">Individual spaces</p>
+        <p>If you need a quiet, focused space away from home, our private rooms offer just that: your own dedicated workspace with access to community kitchens and shared areas. Enjoy the best of both worlds: privacy when you need it and community when you want it.</p>
+        
+      </div>
       
       <div class="space-cards">
         <div class="card">
@@ -183,7 +191,7 @@
     
     
     <section class="contact-us">
-      <h2>Contact us</h2>
+      <p class="sub-header">Contact us</p>
       <p>Need to get in touch? Send us a message or find someone to connect with directly <a href="#">here</a>.</p>
       
       <form class="contact-form">
