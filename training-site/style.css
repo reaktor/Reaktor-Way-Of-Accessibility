@@ -229,11 +229,14 @@ footer, .footer {
   background: white;
   border-radius: 16px;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
-  max-width: 500px;
+  min-width: 450px;
+  max-width: 450px;
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
 }
 
 .card figure {
@@ -297,13 +300,7 @@ strong {
 }
 
 
-.space-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 40px;
-}
+
 
 .space-card {
   background: white;
@@ -573,4 +570,51 @@ input::placeholder, textarea::placeholder {
   background: #F1EFED; /* Sama kuin body tausta */
   position: relative;
   z-index: 10;
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.space-cards {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 24px;
+  padding-bottom: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+  scrollbar-width: thin;
+  scroll-padding: 0 50%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.space-cards::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: black;
 }
