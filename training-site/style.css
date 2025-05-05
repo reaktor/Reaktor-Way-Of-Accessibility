@@ -241,40 +241,84 @@ footer, .footer {
 .card {
   background: white;
   border-radius: 16px;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
   min-width: 450px;
-  max-width: 450px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-}
-
-.card figure {
+  max-width: 450px;  overflow: hidden;
   position: relative;
+  height: 100%;
+  max-height: 300px;
+}
+
+.card .media-container {
   margin: 0;
-  height: 330px;
+  height: 100%;
+  position: relative;
   overflow: hidden;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
 }
 
-.card figure img {
+.card .media-container img {
   width: 100%;
-  display: block;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-}
-
-.card figure > img {
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  color: white;
+  font-family: "Larken", "Helvetica Neue", sans-serif;
+  padding: 24px 24px 0px 24px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.info-top p {
+  color: white;
+}
+
+.info-top {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-bottom {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.info-bottom.expanded {
+  max-height: 300px; /* adjust to fit full content */
+  padding-bottom: 24px;
+}
+
+.content ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 16px;
+  margin: 0;
+}
+
+.chevron {
+  cursor: pointer;
+}
+
+.chevron-icon {
+  display: inline-block;
+  transform: rotate(180deg); /* initially collapsed */
+  transition: transform 0.3s ease;
+}
+
+.chevron-icon.expanded {
+  transform: rotate(0deg); /* flip arrow when expanded */
 }
 
 
-.card figure button {
+.card .media-container .button {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -286,34 +330,27 @@ footer, .footer {
   cursor: pointer;
 }
 
-.card figure button img {
+.card .media-container .button img {
   width: 20px;
   height: 20px;
 }
 
-.card figure figcaption {
-  font-family: "Larken", "Helvetica Neue", "Helvetica", sans-serif;
-  font-weight: 100;
-  font-size: 20px;
-  padding: 16px;
+.heart {
+  width: 24px;
+  height: 24px;
+  color: transparent;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.card ul {
-  list-style: disc;
-  padding-left: 40px;
-  padding-bottom: 24px;
-  font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
-  font-size: 18px;
+.heart.filled {
+  color: #ff4545;
 }
-
 
 /* Strong inside text */
 strong {
   font-weight: 500;
 }
-
-
-
 
 .space-card {
   background: white;
