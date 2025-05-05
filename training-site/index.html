@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rent a Space</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="header">
@@ -16,13 +18,14 @@
           Spaces
           <span class="chevron-icon">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </span>
         </div>
         <div class="dropdown">
-          <a href="#">Shared Spaces</a>
-          <a href="#">Individual Spaces</a>
+          <a href="#shared-spaces">Shared Spaces</a>
+          <a href="#individual-spaces">Individual Spaces</a>
         </div>
       </div>
       <a href="#pricing">Pricing</a>
@@ -31,10 +34,10 @@
   </div>
 
   <main class="container">
-    
+
     <div class="floating-chat">
       <div class="chat-icon">
-        <img src="static/chat-bubble.svg"/>
+        <img src="static/chat-bubble.svg" />
         <span class="chat-badge">1</span>
       </div>
     </div>
@@ -43,18 +46,21 @@
         <p>SIGN UP TO OUR APP AND GET -25% OFF</p>
         <a href="#"">Sign up</a>
       </section>
-      <section class="hero">
-        <video autoplay muted playsinline loop>
-          <source src="static/helsinki-gif.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-          <p class="title">Welcome to Helsinki!</p>
-          <p>Discover your ideal workspace in vibrant Helsinki. Whether you need a cozy nook for focused work or a collaborative environment to spark creativity, find flexible and inspiring spaces that adapt to your needs. Explore our diverse range of locations across Helsinki and unlock a workspace that empowers your productivity.</p>
-          <br/>
-          <p>Rent today and redefine how you work in the heart of Finland's dynamic capital.</p>
-          <a class="button" href="#shared-spaces">Start browsing</a>
+      <section class=" hero">
+          <video autoplay muted playsinline loop>
+            <source src="static/helsinki-gif.mp4" type="video/mp4">
+          </video>
+          <div class="hero-content">
+            <p class="title">Welcome to Helsinki!</p>
+            <p>Discover your ideal workspace in vibrant Helsinki. Whether you need a cozy nook for focused work or a
+              collaborative environment to spark creativity, find flexible and inspiring spaces that adapt to your
+              needs. Explore our diverse range of locations across Helsinki and unlock a workspace that empowers your
+              productivity.</p>
+            <br />
+            <p>Rent today and redefine how you work in the heart of Finland's dynamic capital.</p>
+            <a class="button" href="#shared-spaces">Start browsing</a>
 
-        </div>
+          </div>
       </section>
     </div>
 
@@ -62,33 +68,46 @@
     <section id="shared-spaces" class="shared-spaces">
       <div class="description-container">
         <p class="title">Shared spaces</p>
-        <p>Love working around others and enjoying casual office chats? Our shared spaces are perfect for those who thrive in a social environment. We're known for <a href="https://rex.reaktor.com/people"><b>our vibrant community</b></a>, so if you’re looking to meet new people, this could be the perfect fit for you!</p>
+        <p>Love working around others and enjoying casual office chats? Our shared spaces are perfect for those who
+          thrive in a social environment. We're known for <a href="https://rex.reaktor.com/people"><b>our vibrant
+              community</b></a>, so if you’re looking to meet new people, this could be the perfect fit for you!</p>
       </div>
       <div class="carousel-wrapper">
         <div class="space-cards">
           <div class="card">
             <figure>
-              <img src="static/turku1.jpg" alt="Anankatu 14" />
-              <button tabindex="-1"/>
-                <img src="static/heart.svg" >
-              </button>
-              <figcaption>Anankatu 14</figcaption>
+              <img src="static/turku1.jpg" alt="Urho Kekkosen katu 3">
+
+              <div class="overlay">
+                <div class="info-top">
+                  Urho Kekkosen katu 3
+                </div>
+                <div class="info-bottom collapsed">
+                  <ul>
+                    <li>Kitchen</li>
+                    <li>Collaborative area</li>
+                    <li>Quiet spaces</li>
+                    <li>Lounge space</li>
+                  </ul>
+                </div>
+
+                <div class="chevron" onclick="toggleDetails(this)">
+                  <span class="chevron-icon">⌃</span> <!-- Upwards arrow -->
+                </div>
+              </div>
+              <div class="button" role="button">
+                <div class="heart-icon" data-filled="false"></div>
+              </div>
             </figure>
-            <ul>
-              <li>Kitchen</li>
-              <li>Collaborative area</li>
-              <li>Quiet spaces</li>
-              <li>Relaxation room</li>
-              <li>Snack bar</li>
-            </ul>
           </div>
-      
+
+
           <div class="card">
             <figure>
               <img src="static/turku2.jpg" alt="Lapilahdentie 9" />
-              <button tabindex="-1">
-                <img src="static/heart.svg" />
-              </button>
+              <div class="button" role="button">
+                <div class="heart-icon" data-filled="false"></div>
+              </div>
               <figcaption>Lapilahdentie 9</figcaption>
             </figure>
             <ul>
@@ -98,13 +117,13 @@
               <li>Lounge space</li>
             </ul>
           </div>
-      
+
           <div class="card">
             <figure>
               <img src="static/helsinki1.jpg" alt="Rikhardinkatu 3" />
-              <button tabindex="-1">
-                <img src="static/heart.svg" />
-              </button>
+              <div class="button" role="button">
+                <div class="heart-icon" data-filled="false"></div>
+              </div>
               <figcaption>Rikhardinkatu 3</figcaption>
             </figure>
             <ul>
@@ -114,13 +133,13 @@
               <li>Smart office technology</li>
             </ul>
           </div>
-      
+
           <div class="card">
             <figure>
               <img src="static/turku3.jpg" alt="Sofiankatu 8" />
-              <button tabindex="-1">
-                <img src="static/heart.svg"/>
-              </button>
+              <div class="button" role="button">
+                <div class="heart-icon" data-filled="false"></div>
+              </div>
               <figcaption>Sofiankatu 8</figcaption>
             </figure>
             <ul>
@@ -168,8 +187,8 @@
                     <h3>Unlimited hours</h3>
                     <p>Spend as many hours as you wish in the space you rent.</p>
                   </div>
-              </div>
-            </li>
+                </div>
+              </li>
               <li>
                 <div class="feature-card">
                   <div class="feature-icon">
@@ -191,7 +210,7 @@
                     <p>Our 100 Mbps covers multiple users and devices.</p>
                   </div>
                 </div>
-                </li>
+              </li>
             </ul>
           </div>
           <div class="feature">
@@ -205,8 +224,8 @@
                     <h3>Unlimited hours</h3>
                     <p>Spend as many hours as you wish in the space you rent.</p>
                   </div>
-              </div>
-            </li>
+                </div>
+              </li>
               <li>
                 <div class="feature-card">
                   <div class="feature-icon">
@@ -228,7 +247,7 @@
                     <p>Our 500 Mbps covers multiple users and devices.</p>
                   </div>
                 </div>
-                </li>
+              </li>
             </ul>
           </div>
           <div class="feature">
@@ -242,8 +261,8 @@
                     <h3>Unlimited hours</h3>
                     <p>Spend as many hours as you wish in the space you rent.</p>
                   </div>
-              </div>
-            </li>
+                </div>
+              </li>
               <li>
                 <div class="feature-card">
                   <div class="feature-icon">
@@ -265,7 +284,7 @@
                     <p>Our 500 Mbps covers multiple users and devices.</p>
                   </div>
                 </div>
-                </li>
+              </li>
             </ul>
           </div>
         </div>
@@ -276,28 +295,31 @@
       <img src="static/contact-us.png" />
       <div class="contact-us-content">
         <p class="sub-header">Contact us</p>
-        <p>Need to get in touch? Send us a message or find someone to connect with directly <a href="#"><b>here</b></a>.</p>
-     
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Name *" required>
-        <input type="email" name="email" placeholder="Email *" required>
-        <input type="tel" name="phone" placeholder="Phone *" required>
-        <textarea name="message" placeholder="Message"></textarea>
-        <button type="submit">Proceed</button>
-      </form>
-    </div>
+        <p>Need to get in touch? Send us a message or find someone to connect with directly <a href="#"><b>here</b></a>.
+        </p>
+
+        <form class="contact-form">
+          <input type="text" name="name" placeholder="Name *" required>
+          <input type="email" name="email" placeholder="Email *" required>
+          <input type="tel" name="phone" placeholder="Phone *" required>
+          <textarea name="message" placeholder="Message"></textarea>
+          <button type="submit">Proceed</button>
+        </form>
+      </div>
 
     </section>
 
     <section id="individual-spaces" class="individual-spaces">
       <div class="description-container">
         <p class="sub-header">Individual spaces</p>
-        <p>If you need a quiet, focused space away from home, our private rooms offer just that: your own dedicated workspace with access to community kitchens and shared areas. Enjoy the best of both worlds: privacy when you need it and community when you want it.</p>
+        <p>If you need a quiet, focused space away from home, our private rooms offer just that: your own dedicated
+          workspace with access to community kitchens and shared areas. Enjoy the best of both worlds: privacy when you
+          need it and community when you want it.</p>
       </div>
-    
+
       <div class="carousel-wrapper">
         <div class="space-cards">
-          
+
           <div class="card">
             <figure>
               <img src="static/space1.jpg" alt="Anankatu 14" />
@@ -314,7 +336,7 @@
               <li>Snack bar</li>
             </ul>
           </div>
-      
+
           <div class="card">
             <figure>
               <img src="static/space2.jpg" alt="Lapilahdentie 9" />
@@ -330,7 +352,7 @@
               <li>Lounge space</li>
             </ul>
           </div>
-      
+
           <div class="card">
             <figure>
               <img src="static/space3.jpg" />
@@ -346,7 +368,7 @@
               <li>Smart office technology</li>
             </ul>
           </div>
-      
+
           <div class="card">
             <figure>
               <img src="static/space4.jpg" />
@@ -362,7 +384,7 @@
               <li>Relaxation room</li>
             </ul>
           </div>
-  
+
           <div class="card">
             <figure>
               <img src="static/space5.png" />
@@ -378,8 +400,8 @@
               <li>Relaxation room</li>
             </ul>
           </div>
-         
-          
+
+
         </div>
         <div class="carousel-indicators">
           <span class="dot" data-index="0"></span>
@@ -389,122 +411,139 @@
           <span class="dot" data-index="4"></span>
         </div>
       </div>
-    </section>    
-    
-   
+    </section>
+
+
   </main>
-    <footer class="footer">
-      <div class="footer-nav">
-        <a href="#">Terms and Conditions</a>
-        <a href="#">Privacy</a>
-        <a href="#">Cookies</a>
-      </div>
-      <div class="footer-socials">
-        <a href="#"><img src="static/icons8-facebook.png" alt="Facebook" /></a>
-        <a href="#"><img src="static/icons8-instagram.png" alt="Instagram" /></a>
-        <a href="#"><img src="static/icons8-linkedin.png" alt="LinkedIn" /></a>
-      </div>
-    </footer>
-    
+  <footer class="footer">
+    <div class="footer-nav">
+      <a href="#">Terms and Conditions</a>
+      <a href="#">Privacy</a>
+      <a href="#">Cookies</a>
+    </div>
+    <div class="footer-socials">
+      <a href="#"><img src="static/icons8-facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="static/icons8-instagram.png" alt="Instagram" /></a>
+      <a href="#"><img src="static/icons8-linkedin.png" alt="LinkedIn" /></a>
+    </div>
+  </footer>
 
-</body>  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousels = document.querySelectorAll(".carousel-wrapper");
 
-      carousels.forEach((wrapper) => {
-        const carousel = wrapper.querySelector(".space-cards");
-        const indicators = wrapper.querySelectorAll(".dot");
-        const cards = wrapper.querySelectorAll(".card");
+</body>
+<script>
+  const heartPath = `
+    <svg class="heart" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
+      <path fill="currentColor" stroke="white" stroke-width="1.5" stroke-linecap="square"
+        d="M10.9932 3.54011C8.9938 1.2027 5.65975 0.573939 3.15469 2.71431C0.649644 4.85468 0.296968 8.43327 2.2642 10.9647C3.89982 13.0694 8.84977 17.5084 10.4721 18.9451C10.6536 19.1059 10.7444 19.1862 10.8502 19.2178C10.9426 19.2454 11.0437 19.2454 11.1361 19.2178C11.2419 19.1862 11.3327 19.1059 11.5142 18.9451C13.1365 17.5084 18.0865 13.0694 19.7221 10.9647C21.6893 8.43327 21.3797 4.83217 18.8316 2.71431C16.2835 0.596454 12.9925 1.2027 10.9932 3.54011Z" />
+    </svg>
+  `;
 
-        if (cards.length === 0) return;
+  document.querySelectorAll('.heart-icon').forEach(el => {
+    el.innerHTML = heartPath;
+  });
 
-        let currentIndex = 0;
-        const realTotal = cards.length;
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.heart')) {
+      e.target.closest('.heart').classList.toggle('filled');
+    }
+  });
 
-        function moveToCard(index, behavior = "smooth") {
-          const card = cards[index];
-          if (!card) return;
-          const offset = card.offsetLeft - (carousel.offsetWidth / 2) + (card.offsetWidth / 2);
-          carousel.scrollTo({ left: offset, behavior });
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousels = document.querySelectorAll(".carousel-wrapper");
+
+    carousels.forEach((wrapper) => {
+      const carousel = wrapper.querySelector(".space-cards");
+      const indicators = wrapper.querySelectorAll(".dot");
+      const cards = wrapper.querySelectorAll(".card");
+
+      if (cards.length === 0) return;
+
+      let currentIndex = 0;
+      const realTotal = cards.length;
+
+      function moveToCard(index, behavior = "smooth") {
+        const card = cards[index];
+        if (!card) return;
+        const offset = card.offsetLeft - (carousel.offsetWidth / 2) + (card.offsetWidth / 2);
+        carousel.scrollTo({ left: offset, behavior });
+      }
+
+      function updateIndicators(index) {
+        indicators.forEach((dot) => dot.classList.remove("active"));
+        indicators[index]?.classList.add("active");
+      }
+
+      carousel.addEventListener("scroll", () => {
+        const scrollLeft = carousel.scrollLeft;
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+        // Tolerance for float rounding (e.g. 1-2px leeway)
+        const threshold = 2;
+
+        let newIndex;
+
+        // 🔹 At very start of scroll container
+        if (scrollLeft <= threshold) {
+          newIndex = 0;
+        }
+        // 🔹 At very end of scroll container
+        else if (Math.abs(scrollLeft - maxScroll) <= threshold) {
+          newIndex = cards.length - 1;
+        }
+        // 🔹 Otherwise: find the centered card
+        else {
+          let closestIndex = 0;
+          let closestDistance = Infinity;
+          const center = Math.round(scrollLeft + carousel.offsetWidth / 2);
+
+          cards.forEach((card, i) => {
+            const cardCenter = Math.round(card.offsetLeft + card.offsetWidth / 2);
+            const distance = Math.abs(center - cardCenter);
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              closestIndex = i;
+            }
+          });
+
+          newIndex = closestIndex;
         }
 
-        function updateIndicators(index) {
-          indicators.forEach((dot) => dot.classList.remove("active"));
-          indicators[index]?.classList.add("active");
-        }
-
-        carousel.addEventListener("scroll", () => {
-          const scrollLeft = carousel.scrollLeft;
-          const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-
-          // Tolerance for float rounding (e.g. 1-2px leeway)
-          const threshold = 2;
-
-          let newIndex;
-
-          // 🔹 At very start of scroll container
-          if (scrollLeft <= threshold) {
-            newIndex = 0;
-          }
-          // 🔹 At very end of scroll container
-          else if (Math.abs(scrollLeft - maxScroll) <= threshold) {
-            newIndex = cards.length - 1;
-          }
-          // 🔹 Otherwise: find the centered card
-          else {
-            let closestIndex = 0;
-            let closestDistance = Infinity;
-            const center = Math.round(scrollLeft + carousel.offsetWidth / 2);
-
-            cards.forEach((card, i) => {
-              const cardCenter = Math.round(card.offsetLeft + card.offsetWidth / 2);
-              const distance = Math.abs(center - cardCenter);
-              if (distance < closestDistance) {
-                closestDistance = distance;
-                closestIndex = i;
-              }
-            });
-
-            newIndex = closestIndex;
-          }
-
-          if (newIndex !== currentIndex) {
-            currentIndex = newIndex;
-            updateIndicators(currentIndex);
-          }
-        });
-
-
-        // Autoplay setup
-        let autoplay;
-
-        function startAutoplay() {
-          autoplay = setInterval(() => {
-            currentIndex = (currentIndex + 1) % realTotal;
-            moveToCard(currentIndex);
-            updateIndicators(currentIndex);
-          }, 5000);
-        }
-
-        function stopAutoplay() {
-          clearInterval(autoplay);
-        }
-
-        // Pause on hover
-        carousel.addEventListener("mouseenter", stopAutoplay);
-        carousel.addEventListener("mouseleave", startAutoplay);
-
-        // Initial scroll and autoplay start
-        setTimeout(() => {
-          moveToCard(currentIndex, "auto");
+        if (newIndex !== currentIndex) {
+          currentIndex = newIndex;
           updateIndicators(currentIndex);
-          startAutoplay();
-        }, 100);
+        }
       });
+
+
+      // Autoplay setup
+      let autoplay;
+
+      function startAutoplay() {
+        autoplay = setInterval(() => {
+          currentIndex = (currentIndex + 1) % realTotal;
+          moveToCard(currentIndex);
+          updateIndicators(currentIndex);
+        }, 3000);
+      }
+
+      function stopAutoplay() {
+        clearInterval(autoplay);
+      }
+
+      // Pause on hover
+      carousel.addEventListener("mouseenter", stopAutoplay);
+      carousel.addEventListener("mouseleave", startAutoplay);
+
+      // Initial scroll and autoplay start
+      setTimeout(() => {
+        moveToCard(currentIndex, "auto");
+        updateIndicators(currentIndex);
+        startAutoplay();
+      }, 100);
     });
+  });
 </script>
 
-  
-  
+
+
 </html>

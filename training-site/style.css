@@ -183,7 +183,7 @@ footer, .footer {
 .footer-nav, .footer-socials {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 8px;
 }
 
 
@@ -422,6 +422,13 @@ input::placeholder, textarea::placeholder {
 
 .pricing-row {
   border-bottom: 1px solid #eee;
+}
+
+.pricing-row .feature ul {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr); /* Assuming 3 items per column */
+  gap: 16px;
+  height: 100%;
 }
 
 .feature-title {
