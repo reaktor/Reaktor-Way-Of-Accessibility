@@ -85,47 +85,64 @@ nav, .nav, nav p, nav a {
   align-items: center;
 }
 
-
-.spaces-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
 .chevron-icon {
   margin-left: 10px;
-  transform-origin: center;
   transition: transform 0.2s linear;
 }
 
-.chevron-icon svg {
+.settings svg {
   vertical-align: middle;
   display: inline-block;
+}
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  z-index: 9999; /* ensures it appears on top */
 }
 
 .dropdown-button {
   cursor: pointer;
-
+  padding: 4px;
 }
 
 .dropdown {
   position: absolute;
-  left: -50%;
+  top: 100%;
+  right: -50%;
   background-color: white;
-  padding: 24px 40px;
-  display: flex;
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   flex-direction: column;
-  gap: 24px;
-  border-radius: 16px;
-  box-shadow: 0px 2px 3px rgba(0,0,0,.4);
-  transition: visibility 0s, opacity 0.2s linear;
-  z-index: 1;
+  gap: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  z-index: 9999;
 }
 
-.spaces-dropdown:hover .dropdown {visibility: visible; opacity: 1;}
+.dropdown.up {
+  bottom: 100%;
+  top: auto;
+}
 
-.spaces-dropdown:hover .chevron-icon {
+.dropdown a {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.dropdown a:hover {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.dropdown-container:hover .dropdown {
+  display: flex;
+}
+
+.dropdown-container:hover .chevron-icon {
   transform: rotate(180deg);
 }
 
@@ -243,17 +260,17 @@ footer, .footer {
   border-radius: 16px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
   min-width: 450px;
-  max-width: 450px;  overflow: hidden;
+  max-width: 450px;  
+  overflow: hidden;
   position: relative;
-  height: 100%;
   max-height: 300px;
 }
+
 
 .card .media-container {
   margin: 0;
   height: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .card .media-container img {
@@ -303,13 +320,24 @@ footer, .footer {
   margin: 0;
 }
 
-.chevron {
+.settings {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.settings .chevron-icon img,
+.settings .dots-icon {
+  width: 12px;
+  height: 12px;
   cursor: pointer;
 }
 
+
 .chevron-icon {
   display: inline-block;
-  transform: rotate(180deg); /* initially collapsed */
+  transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
 
