@@ -2,21 +2,21 @@
   font-family: Larken;
   font-style: normal;
   font-weight: 100;
-  src: url("./fonts/LarkenW05-Thin.woff2") format("woff2");
+  src: url("https://assets.codepen.io/14105486/LarkenW05-Thin.woff2") format("woff2");
 }
 
 @font-face {
   font-family: Scto;
   font-style: normal;
   font-weight: 300;
-  src: url("./fonts/Scto-Grotesk-A-Light.woff") format("woff");
+  src: url("https://assets.codepen.io/14105486/Scto-Grotesk-A-Light.woff") format("woff");
 }
 
 @font-face {
   font-family: Scto;
   font-style: normal;
   font-weight: 700, bold;
-  src: url("./fonts/Scto-Grotesk-A-Bold.woff") format("woff");
+  src: url("https://assets.codepen.io/14105486/Scto-Grotesk-A-Bold.woff") format("woff");
 }
 
 html,
@@ -72,7 +72,6 @@ a {
 }
 
 .exercise-section {
-  display: flex;
   align-items: flex-start;
   gap: 48px;
   border-bottom: 1px solid black;
@@ -91,12 +90,14 @@ a {
 }
 
 .exercise-section-title {
+  padding-bottom: 24px;
   display: flex;
-  height: fit-content;
   gap: 24px;
 }
 
 .exercise-section-title button {
+  display: flex;
+  gap: 16px;
   color: black;
   font-family: "Larken", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 36px;
@@ -104,8 +105,8 @@ a {
   background: none;
   border: none;
   padding: 0;
-  width: 22px;
 }
+
 
 .exercise-section-title button:hover {
   cursor: pointer;
@@ -128,7 +129,7 @@ a {
   margin-bottom: 8px;
   font-size: 24px;
   font-family: "Scto", "Helvetica Neue", "Helvetica", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .alt-text-figure {
@@ -136,6 +137,8 @@ a {
 }
 
 .alt-text-figure img {
+  padding-top: 24px;
+  padding-bottom: 8px;
   max-width: 600px;
   height: auto;
 }
